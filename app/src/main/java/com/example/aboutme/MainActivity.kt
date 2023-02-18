@@ -28,7 +28,7 @@ import com.example.aboutme.databinding.ActivityMainBinding
         }
 
         binding.nicknameText.setOnClickListener {
-            updateNickname()
+            updateNickname(it)
         }
     }
 
@@ -48,7 +48,7 @@ import com.example.aboutme.databinding.ActivityMainBinding
         inputMethodManager.hideSoftInputFromWindow(view.windowToken, 0)
     }
 
-     private fun updateNickname(){
+     private fun updateNickname(view: View){
          binding.apply {
              nicknameEdit.visibility = View.VISIBLE
              doneButton.visibility = View.VISIBLE
